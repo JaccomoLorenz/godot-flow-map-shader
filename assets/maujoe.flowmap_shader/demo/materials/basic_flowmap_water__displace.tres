@@ -1,0 +1,48 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=2]
+
+[ext_resource path="res://assets/maujoe.flowmap_shader/shader/basic_flowmap_material__displace.shader" type="Shader" id=1]
+[ext_resource path="res://assets/maujoe.flowmap_shader/demo/textures/displace.png" type="Texture" id=2]
+[ext_resource path="res://assets/maujoe.flowmap_shader/demo/textures/flowmap.png" type="Texture" id=3]
+[ext_resource path="res://assets/maujoe.flowmap_shader/demo/textures/water_normal.png" type="Texture" id=4]
+
+[resource]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/albedo = Color( 0, 0.333333, 0.392157, 0.980392 )
+shader_param/specular = null
+shader_param/metallic = null
+shader_param/roughness = null
+shader_param/metallic_texture_channel = null
+shader_param/roughness_texture_channel = null
+shader_param/emission = null
+shader_param/emission_energy = null
+shader_param/refraction = null
+shader_param/refraction_texture_channel = null
+shader_param/uv_scale = Vector2( 16, 16 )
+shader_param/uv_offset = null
+shader_param/proximity_fade_distance = 0.5
+shader_param/distance_fade_min = 0.0
+shader_param/distance_fade_max = 1.0
+shader_param/normal_scale = 0.2
+shader_param/flow_normal_influence = 0.0
+shader_param/displace_texture_channel = null
+shader_param/displace_scale = 1.0
+shader_param/flow_displace_influence = 0.0
+shader_param/displace_cycle_speed = 0.2
+shader_param/displace_speed = 0.1
+shader_param/displace_offset = -0.5
+shader_param/flow_map_x_channel = null
+shader_param/flow_map_y_channel = null
+shader_param/channel_flow_direction = Vector2( 1, -1 )
+shader_param/blend_cycle = 5.0
+shader_param/cycle_speed = 2.0
+shader_param/flow_speed = 0.1
+shader_param/noise_texture_channel = null
+shader_param/flow_noise_size = null
+shader_param/flow_noise_influence = null
+shader_param/texture_normal = ExtResource( 4 )
+shader_param/texture_displace = ExtResource( 2 )
+shader_param/texture_flow_map = ExtResource( 3 )
+_sections_unfolded = [ "shader_param" ]
+

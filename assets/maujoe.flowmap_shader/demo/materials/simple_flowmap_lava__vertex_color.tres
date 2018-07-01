@@ -1,0 +1,41 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=2]
+
+[ext_resource path="res://assets/maujoe.flowmap_shader/shader/basic_flowmap_material__vertex_color.shader" type="Shader" id=1]
+[ext_resource path="res://assets/maujoe.flowmap_shader/demo/textures/lava.png" type="Texture" id=2]
+[ext_resource path="res://assets/maujoe.flowmap_shader/demo/textures/water_normal.png" type="Texture" id=3]
+
+[resource]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/albedo = Color( 0.304688, 0.304688, 0.304688, 0.966824 )
+shader_param/specular = 0.0
+shader_param/metallic = 0.0
+shader_param/roughness = 1.0
+shader_param/metallic_texture_channel = null
+shader_param/roughness_texture_channel = null
+shader_param/emission = Color( 0, 0, 0, 1 )
+shader_param/emission_energy = 1.0
+shader_param/refraction = null
+shader_param/refraction_texture_channel = null
+shader_param/uv_scale = Vector2( 4, 4 )
+shader_param/uv_offset = null
+shader_param/proximity_fade_distance = 0.5
+shader_param/distance_fade_min = 0.0
+shader_param/distance_fade_max = 1.0
+shader_param/normal_scale = 0.3
+shader_param/flow_normal_influence = null
+shader_param/flow_map_x_channel = null
+shader_param/flow_map_y_channel = null
+shader_param/channel_flow_direction = Vector2( 1, -1 )
+shader_param/blend_cycle = 10.0
+shader_param/cycle_speed = 1.0
+shader_param/flow_speed = -0.1
+shader_param/noise_texture_channel = null
+shader_param/flow_noise_size = null
+shader_param/flow_noise_influence = null
+shader_param/texture_albedo = ExtResource( 2 )
+shader_param/texture_emission = ExtResource( 2 )
+shader_param/texture_normal = ExtResource( 3 )
+_sections_unfolded = [ "shader_param" ]
+

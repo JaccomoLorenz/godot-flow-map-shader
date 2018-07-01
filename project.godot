@@ -1,0 +1,26 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[application]
+
+config/name="Flowmap Material Shader"
+run/main_scene="res://assets/maujoe.flowmap_shader/demo/water_example.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/resizable=false
+window/size/test_width=1920
+window/size/test_height=1080
+window/vsync/use_vsync=false
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
