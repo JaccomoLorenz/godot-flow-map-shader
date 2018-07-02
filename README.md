@@ -3,6 +3,8 @@
 A basic flow map material shader for Godot 3.x.
 Flow maps are a texture based way to make detailed texture animations (e.g. water, lava, fluids...) or texture distortions.
 
+Video: https://youtu.be/kkZJ9SBH_24
+
 
 ## How it works
 
