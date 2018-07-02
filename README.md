@@ -18,13 +18,13 @@ For references and more details about flow maps see below.
 
 
 ## How to create flow maps
-Painting flow maps manually is tricky but there are some software to create them (see below).
+Painting flow maps manually is tricky but there are some programs to create them.
 
 #### Software to create flow maps
 - Flowmap Painter by teckArtist: http://teckartist.com/?page_id=107
 - Flow Field Editor by Stanislaw Adaszewski: https://github.com/sadaszewski/flowed
 - Flowmap generator by Superposition Games (Paid): http://www.superpositiongames.com/ (Haven't tested it but looks powerfull)
-- It's also possible to create flow maps from whole simulations with the Ssoftware Houdini but I haven't done this yet.
+- It's also possible to create flow maps from whole simulations with the Software Houdini but I haven't done this yet.
 - ...
 
 
@@ -37,17 +37,17 @@ There are two example scenes in the demo folder that demostrate how to use flow 
 There are multiple shader variations for different requirements that are marked via file names:
 
 - "basic_flowmap_material.shader" - Default shader.
-- "displace" - Allows displacement via height map. (WIP Works ok with small displace scale).
+- "displace" - Allows displacement via height map. (WIP doens't update normals but works ok with small displace scale).
 - "per_vertex" - Calculate flow per vertex instead of per per pixel.
 - "vertex_color" - Use the vertex color instead of a flow map.
 
 #### Performance Optimizitions:
-- The shader allows to animate all textures to give much possibilities. So the performance can be improved by deleting (replace) unnecessary (not used) shader code.
+- The shader allows to animate all textures to give much possibilities. The performance can be improved by deleting (replace with default code) unnecessary shader code.
 
 
 ## Shader settings
 
-The many shader settings are equivalent to godot spatial material editor and are explained in the Godot docs http://docs.godotengine.org/en/3.0.
+Many shader settings are equivalent to godot spatial material editor and are explained in the Godot docs http://docs.godotengine.org/en/3.0.
 The shader specific settings can be found below.
 
 #### Flow map Settings
@@ -55,10 +55,9 @@ The shader specific settings can be found below.
 - vec4 flow_map_x_channel - The texture channel to animate along the x-axis. Default value is (1.0, 0.0, 0.0, 0.0) (red channel).
 - vec4 flow_map_y_channel - The texture channel to animate along the y-axis. Default value is (0.0, 1.0, 0.0, 0.0) (green channel).
 - vec2 channel_flow_direction - Set the flow directions of the x and y axes.
-- float blend_cycle - The length of one blend cycle of the two layers. Default value is 1.0.
+- float blend_cycle - The "duration * 2" until the texture animation start over. Default value is 1.0.
 - float cycle_speed - The speed of the blend cycle. Default value is 1.0.
-- float flow_speed - The speed of the flow independent from the blend cycle (can cause distortions). Default value is 1.0.
-- float speed - The speed/direction of the flow.
+- float flow_speed - The speed/direction of the flow independent from the blend cycle (can cause distortions). Default value is 1.0.
 - float flow_normal_influence - A factor to control how much the flow speed influence the normal scale. Default value is 0.
 
 
