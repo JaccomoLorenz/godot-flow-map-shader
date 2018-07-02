@@ -21,7 +21,7 @@ For references and more details about flow maps see below.
 Painting flow maps manually is tricky but there are some programs to create them.
 
 #### Software to create flow maps
-- Flowmap Painter by teckArtist: http://teckartist.com/?page_id=107
+- Flowmap Painter by Teck Lee Tan: http://teckartist.com/?page_id=107
 - Flow Field Editor by Stanislaw Adaszewski: https://github.com/sadaszewski/flowed
 - Flowmap generator by Superposition Games (Paid): http://www.superpositiongames.com/ (Haven't tested it but looks powerfull)
 - It's also possible to create flow maps from whole simulations with the Software Houdini but I haven't done this yet.
