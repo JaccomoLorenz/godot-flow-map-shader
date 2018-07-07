@@ -6,7 +6,7 @@ uniform float specular;
 uniform float metallic;
 uniform float roughness : hint_range(0,1);
 uniform sampler2D texture_metallic : hint_white;
-uniform vec4 metallic_texture_channel;
+uniform vec4 metallic_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
 uniform sampler2D texture_roughness : hint_white;
 uniform vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
 uniform sampler2D texture_emission : hint_black_albedo;
@@ -37,7 +37,7 @@ uniform float flow_speed =  0.5;
 
 uniform sampler2D texture_flow_noise;
 uniform vec4 noise_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
-uniform vec2 flow_noise_size = vec2(1.0, 1.0);
+uniform vec2 flow_noise_size = vec2(1.0, -1.0);
 uniform float flow_noise_influence = 0.5;
 
 
