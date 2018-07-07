@@ -12,7 +12,7 @@ Basically it uses 2 channels of a texture to move texture coordinates along the 
 Each channel controls one axis. A channel color value of 0.5 means no flow, a value greater than 0.5 moves the coordinates along one direction of an axis  and a value smaller than 0.5 moves it to the opposite direction.
 So with the right values textures can be moved in all directions and that for each location individually unlike simple uv scroll. River example:
 
-<img src="assets/maujoe.flowmap_shader/demo/textures/flowmap.png" width="250">
+<img src="demo/textures/flowmap.png" width="250">
 
 But there are also some limitations, so to avoid big texture scratches/artifacts in the long run there are two repeating layers which are offseted and blended together. Also to minimize the pulsing effect a noise texture can be used to add some random offset.
 
