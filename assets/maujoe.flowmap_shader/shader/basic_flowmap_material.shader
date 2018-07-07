@@ -73,7 +73,7 @@ void fragment() {
 	phase1 -= half_cycle;
 	phase2 -= half_cycle;
 
-	// Multiply with scale to make flow speed independend from the uv scaling
+	// Multiply with scale to make flow speed independent from the uv scaling
 	flow *= flow_speed * uv_scale;
 
 	vec2 layer1 = flow * phase1 + base_uv;

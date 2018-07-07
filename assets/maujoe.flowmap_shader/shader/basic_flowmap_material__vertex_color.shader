@@ -65,7 +65,7 @@ void vertex() {
 	flow.y = dot(flow_tex, flow_map_y_channel) * 2.0 - 1.0;
 	flow *= normalize(channel_flow_direction);
 
-	// Make flow incluence on the normalmap / displace strenght adjustable (optional)
+	// Make flow influence on the normalmap / displace strenght adjustable (optional)
 	float flow_strength = dot(abs(flow), vec2(1.0, 1.0)) * 0.5;
 	normal_influence = mix(1.0, flow_strength, flow_normal_influence);
 
@@ -76,7 +76,7 @@ void vertex() {
 	phase1 -= half_cycle;
 	phase2 -= half_cycle;
 
-	// Multiply with scale to make flow speed independend from the uv scaling
+	// Multiply with scale to make flow speed independent from the uv scaling
 	flow *= flow_speed * uv_scale;
 
 	layer1 = flow * phase1 + base_uv;
