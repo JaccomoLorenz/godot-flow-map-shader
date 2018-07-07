@@ -6,13 +6,13 @@ Flow maps are a texture based way to make detailed texture animations (e.g. wate
 Video: https://youtu.be/kkZJ9SBH_24
 
 
-## How it works
+# How it works
 
 Basically it uses 2 channels of a texture to move texture coordinates along the x and y axes.
 Each channel controls one axis. A channel color value of 0.5 means no flow, a value greater than 0.5 moves the coordinates along one direction of an axis  and a value smaller than 0.5 moves it to the opposite direction.
 So with the right values textures can be moved in all directions and that for each location individually unlike simple uv scroll. River example:
 
-<img src="demo/textures/flowmap.png" width="250">
+<img src="assets/maujoe.flowmap_shader/demo/textures/flowmap.png" width="250">
 
 But there are also some limitations, so to avoid big texture scratches/artifacts in the long run there are two repeating layers which are offseted and blended together. Also to minimize the pulsing effect a noise texture can be used to add some random offset.
 
@@ -43,8 +43,8 @@ There are multiple shader variations for different requirements that are marked 
 - "per_vertex" - Calculate flow per vertex instead of per per pixel.
 - "vertex_color" - Use the vertex color instead of a flow map.
 
-#### Performance Optimizitions:
-- The shader allows to animate all textures to give much possibilities. The performance can be improved by deleting (replace with default code) unnecessary shader code.
+#### Performance Optimizitions / Customization:
+By default all textures are affected by the flowmap. The shader can be optimized/customized by deleting/replacing unnecessary shader code (with the default one).
 
 
 ## Shader settings
@@ -56,11 +56,11 @@ The shader specific settings can be found below.
 - sampler2D texture_flow_map - The flow map texture that represents a 2D vector field to animate the uv coordinates.
 - vec4 flow_map_x_channel - The texture channel to animate along the x-axis. Default value is (1.0, 0.0, 0.0, 0.0) (red channel).
 - vec4 flow_map_y_channel - The texture channel to animate along the y-axis. Default value is (0.0, 1.0, 0.0, 0.0) (green channel).
-- vec2 channel_flow_direction - Set the flow directions of the x and y axes.
+- vec2 channel_flow_direction - Set the flow directions of the x and y axes. Default value is (1, -1).
 - float blend_cycle - The "duration * 2" until the texture animation start over. Default value is 1.0.
 - float cycle_speed - The speed of the blend cycle. Default value is 1.0.
 - float flow_speed - The speed/direction of the flow independent from the blend cycle (can cause distortions). Default value is 1.0.
-- float flow_normal_influence - A factor to control how much the flow speed influence the normal scale. Default value is 0.
+- float flow_normal_influence - A factor to control how much the flow speed influences the normal scale. Default value is 0.0.
 
 
 - sampler2D texture_flow_noise - A noise texture to offset uv coordinates and minimize pulsing effects (Optional).
@@ -72,7 +72,7 @@ The shader specific settings can be found below.
 - sampler2D texture_displace - A height map texture used for displacement.
 - vec4 displace_texture_channel - The texture channel used for the displacement.
 - float displace_scale - The scale of the dislpacement.
-- float flow_displace_influence - A factor to control how much the flow speed influence the displace scale. Default value is 0.
+- float flow_displace_influence - A factor to control how much the flow speed influence the displace scale. Default value is 0.0.
 
 
 ## References / More about Flow maps
