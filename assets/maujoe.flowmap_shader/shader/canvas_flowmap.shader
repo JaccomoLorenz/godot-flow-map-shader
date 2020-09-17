@@ -30,7 +30,7 @@ void fragment() {
 	vec2 flow;
 	flow.x = dot(flow_tex, flow_map_x_channel) * 2.0 - 1.0;
 	flow.y = dot(flow_tex, flow_map_y_channel) * 2.0 - 1.0;
-	flow *= normalize(channel_flow_direction);
+	flow *= normalize(channel_flow_direction) * flow_speed;
 
 	// Blend factor to mix the two layers
 	float blend_factor = abs(half_cycle - phase1)/half_cycle;

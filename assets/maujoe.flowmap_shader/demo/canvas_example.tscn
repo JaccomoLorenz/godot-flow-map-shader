@@ -11,7 +11,7 @@ noise = SubResource( 1 )
 
 [sub_resource type="ShaderMaterial" id=3]
 shader = ExtResource( 1 )
-shader_param/flow_speed = 0.1
+shader_param/flow_speed = 3.0
 shader_param/flow_noise_size = Vector2( 1, 1 )
 shader_param/flow_noise_influence = 1.0
 shader_param/noise_texture_channel = Plane( 1, 0, 0, 0 )
@@ -19,7 +19,7 @@ shader_param/flow_map_x_channel = Plane( 1, 0, 0, 0 )
 shader_param/flow_map_y_channel = Plane( 0, 1, 0, 0 )
 shader_param/channel_flow_direction = Vector2( 1, -1 )
 shader_param/blend_cycle = 1.0
-shader_param/cycle_speed = 1.0
+shader_param/cycle_speed = 0.2
 shader_param/flow_map = ExtResource( 2 )
 shader_param/flow_noise = SubResource( 2 )
 
@@ -27,6 +27,6 @@ shader_param/flow_noise = SubResource( 2 )
 
 [node name="lava" type="Sprite" parent="."]
 material = SubResource( 3 )
-position = Vector2( 537, 257 )
-scale = Vector2( 3.59375, 2.61719 )
+position = Vector2( 537, 223.288 )
+scale = Vector2( 3.59375, 2.88056 )
 texture = ExtResource( 3 )
