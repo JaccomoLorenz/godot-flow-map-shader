@@ -4,6 +4,10 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/checker.png-9e383410096ced6337fb902f686439e7.s3tc.stex"
 path.etc2="res://.import/checker.png-9e383410096ced6337fb902f686439e7.etc2.stex"
+metadata={
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
+}
 
 [deps]
 
@@ -15,6 +19,7 @@ dest_files=[ "res://.import/checker.png-9e383410096ced6337fb902f686439e7.s3tc.st
 compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=1
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=true
 flags/filter=false
@@ -24,6 +29,7 @@ flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=false

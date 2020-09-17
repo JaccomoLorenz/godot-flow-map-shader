@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/maujoe.flowmap_shader/shader/canvas_flowmap.shader" type="Shader" id=1]
+[ext_resource path="res://assets/maujoe.flowmap_shader/demo/textures/flowmap.png" type="Texture" id=2]
+[ext_resource path="res://assets/maujoe.flowmap_shader/demo/textures/lava.png" type="Texture" id=3]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+
+[sub_resource type="NoiseTexture" id=2]
+noise = SubResource( 1 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 1 )
+shader_param/flow_speed = 3.0
+shader_param/flow_noise_size = Vector2( 1, 1 )
+shader_param/flow_noise_influence = 1.0
+shader_param/noise_texture_channel = Plane( 1, 0, 0, 0 )
+shader_param/flow_map_x_channel = Plane( 1, 0, 0, 0 )
+shader_param/flow_map_y_channel = Plane( 0, 1, 0, 0 )
+shader_param/channel_flow_direction = Vector2( 1, -1 )
+shader_param/blend_cycle = 1.0
+shader_param/cycle_speed = 0.2
+shader_param/flow_map = ExtResource( 2 )
+shader_param/flow_noise = SubResource( 2 )
+
+[node name="root" type="Node2D"]
+
+[node name="lava" type="Sprite" parent="."]
+material = SubResource( 3 )
+position = Vector2( 537, 223.288 )
+scale = Vector2( 3.59375, 2.88056 )
+texture = ExtResource( 3 )
